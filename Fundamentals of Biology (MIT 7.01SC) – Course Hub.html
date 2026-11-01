@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fundamentals of Biology (MIT 7.01SC) – Course Hub</title>
+<style>
+:root{--bg:#f6f8f4;--card:#fff;--ink:#17261d;--mute:#5b6b61;--acc:#0f8a5f;--acc2:#e8f5ee;--line:#dbe4dd;--vid:#2563eb;--hlp:#b45309;--prb:#7c3aed;--lnk:#0f766e;--ex:#be123c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1511;--card:#16201a;--ink:#e6efe9;--mute:#9bb0a3;--acc:#3ddc97;--acc2:#1a2c23;--line:#26362d;--vid:#7aa7ff;--hlp:#f5b461;--prb:#b89bff;--lnk:#5eead4;--ex:#fb7185;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1511;--card:#16201a;--ink:#e6efe9;--mute:#9bb0a3;--acc:#3ddc97;--acc2:#1a2c23;--line:#26362d;--vid:#7aa7ff;--hlp:#f5b461;--prb:#b89bff;--lnk:#5eead4;--ex:#fb7185;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+header{background:linear-gradient(135deg,#0b5d42,#0f8a5f 60%,#27b37f);color:#fff;padding:40px 20px 56px}
+.w{max-width:1100px;margin:0 auto}
+header small{opacity:.85;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+h1{margin:6px 0 10px;font-size:clamp(28px,5vw,46px);line-height:1.1}
+header p{max-width:700px;margin:0 0 14px;opacity:.95}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.meta span{background:rgba(255,255,255,.18);padding:4px 12px;border-radius:99px;font-size:14px}
+.bar{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+.bar .w{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.bar input{flex:1;min-width:180px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font-size:15px}
+.bar nav{display:flex;gap:6px;flex-wrap:wrap}
+.bar nav a,.bar button{text-decoration:none;font-size:14px;padding:7px 12px;border-radius:99px;background:var(--acc2);color:var(--acc);border:0;cursor:pointer;font-weight:600}
+main{padding:24px 16px 60px}
+.unit{margin:34px 0}
+.unit h2{font-size:26px;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+.unit h2:before{content:"";width:8px;height:26px;border-radius:4px;background:var(--acc)}
+.unit .sub{color:var(--mute);margin:0 0 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:0 0 14px}
+.card h3{margin:0 0 12px;font-size:18px}.card h3 a{text-decoration:none}.card h3 a:hover{text-decoration:underline}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.col h4{margin:0 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.col ul{list-style:none;margin:0;padding:0}.col li{margin:0 0 6px}
+.col a{display:block;padding:8px 10px;border-radius:10px;background:var(--bg);text-decoration:none;font-size:14.5px;border-left:3px solid currentColor;overflow-wrap:anywhere}
+.col a:hover{filter:brightness(.95);text-decoration:underline}
+.col .t{color:var(--ink)}
+.v h4,.v a{color:var(--vid)}.h h4,.h a{color:var(--hlp)}.p h4,.p a{color:var(--prb)}.l h4,.l a{color:var(--lnk)}
+.col a{color:inherit}.col a span{color:var(--ink)}
+.none{color:var(--mute);font-size:14px}
+.exam{border-color:var(--ex)}.exam h3{color:var(--ex)}.exam .col a{color:var(--ex)}
+.hide{display:none!important}
+footer{border-top:1px solid var(--line);padding:24px 16px;color:var(--mute);font-size:14px;text-align:center}
+footer a{color:var(--acc)}
+</style></head><body>
+<header><div class="w"><small>MIT OpenCourseWare · 7.01SC · Fall 2011 · Undergraduate</small>
+<h1>Fundamentals of Biology</h1>
+<p>Every lecture clip, help session video, practice problem set, solution, useful link and exam from the course’s Resource Index, organised on one easy page. All titles are exactly as MIT lists them and every link opens the original resource.</p>
+<div class="meta"><span>Prof. Eric Lander</span><span>Prof. Robert Weinberg</span><span>Prof. Tyler Jacks</span><span>Prof. Hazel Sive</span><span>Prof. Graham Walker</span><span>Prof. Sallie Chisholm</span><span>Dr. Michelle Mischke</span></div>
+<div class="meta"><span>Biology</span><span>Science</span></div></div></header>
+<div class="bar"><div class="w"><input id="q" type="search" placeholder="Search topics, videos, problem sets, links…" aria-label="Search">
+<nav id="nav"></nav><button id="th" type="button">Theme</button></div></div>
+<main class="w" id="app"></main>
+<footer>Course content © MIT OpenCourseWare, licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Source: <a href="https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/pages/resource-index/">Resource Index</a> · <a href="https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/download">Download Course</a> · <a href="https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/pages/syllabus/">Syllabus</a><br>Organised by BRAINASTICS | By Swaraj Jadhav</footer>
+<script>
+const B='https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/';
+const R=s=>B+'resources/'+s+'/',P=s=>B+'pages/'+s+'/';
+// topic: [title,pagePath,videos,help,[ps,suffix],links]
+const U=[
+{n:'Biochemistry',p:'biochemistry',ex:['Exam 1','biochemistry/exam-1','mit7_01scf11_exam1','mit7_01scf11_exam1_sol'],t:[
+['Types of Organisms, Cell Composition','biochemistry/types-of-organisms-cell-composition',[['Types of Organisms, Cell Composition, Excerpt 1','types-of-organisms-cell-composition-excerpt-1-1'],['Types of Organisms, Cell Composition, Excerpt 2','types-of-organisms-cell-composition-excerpt-2-1']],[],['1-1',''],[['Plant, Animal, and Bacteria Cell Models','https://www.cellsalive.fun/cellsalive_files/cells/3dcell.htm'],['Cell Cams','https://www.cellsalive.fun/cellsalive_files/cam0.htm']]],
+['Covalent Bonds, Hydrogen Bonds','biochemistry/covalent-bonds-hydrogen-bonds',[['Covalent Bonds, Hydrogen Bonds','covalent-bonds-hydrogen-bonds-1'],['Covalent Bonds','covalent-bonds-1']],[],['1-2',''],[['20-Second Story about Hydrogen Bonding','http://www.youtube.com/watch?v=LGwyBeuVjhU'],['How Geckos Stick','https://www.sciencedaily.com/releases/2002/08/020828063412.htm'],['Hydrophobic Interactions','https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_%28Physical_and_Theoretical_Chemistry%29/Physical_Properties_of_Matter/Atomic_and_Molecular_Properties/Intermolecular_Forces/Hydrophobic_Interactions'],['Green Basilisk Lizard','http://animals.nationalgeographic.com/animals/reptiles/green-basilisk-lizard/?source=A-to-Z'],['Ice Water and Hot Water movies','http://www.chamotlabs.com/Samples.shtml']]],
+['Macromolecules: Lipids, Carbohydrates, Nucleic Acid','biochemistry/macromolecules-lipids-carbohydrates-nucleic-acid',[['Macromolecules: Lipids, Carbohydrates, Nucleic Acid, Excerpt 1','macromolecules-lipids-carbohydrates-nucleic-acid-excerpt-1-1'],['Macromolecules: Lipids, Carbohydrates, Nucleic Acid, Excerpt 2','macromolecules-lipids-carbohydrates-nucleic-acid-excerpt-2-1']],[['Lipids, Carbohydrates, and Nucleic Acids Practice Problem','lipids-carbohydrates-and-nucleic-acids-practice-problem-1']],['1-3',''],[['Phospholipids','http://www.biology-pages.info/P/Phospholipids.html'],['Lipids','https://www.youtube.com/watch?v=VGHD9e3yRIU'],['Chirality','http://www.nobelprize.org/nobel_prizes/chemistry/laureates/2001/illpres/game.html'],['Carbohydrates','http://www.biology-pages.info/C/Carbohydrates.html'],['Building Blocks of DNA','https://www.biointeractive.org/classroom-resources/building-blocks-dna#:~:text=This%20animation%20describes%20the%20four,double%20helix%20structure%20of%20DNA.'],['Chargaff’s Ratio','https://www.biointeractive.org/classroom-resources/chargaffs-ratio']]],
+['Proteins, Levels of Structure, Non-Covalent Forces','biochemistry/proteins-levels-of-structure-non-covalent-forces',[['Proteins, Levels of Structure, Non-Covalent Forces, Excerpt 1','proteins-levels-of-structure-non-covalent-forces-excerpt-1-1'],['Proteins, Levels of Structure, Non-Covalent Forces, Excerpt 2','proteins-levels-of-structure-non-covalent-forces-excerpt-2-1']],[],['1-4',''],[['StarBiochem 3-D Protein Viewer','http://web.mit.edu/Star/biochem/'],['Protein folding','http://www.youtube.com/watch?v=_xF96sNWnK4&feature=related'],['Primary, Secondary, Tertiary, and Quaternary Structure of Proteins','https://www.youtube.com/watch?v=ki9dwhCwMsI'],['Gecko Locomotion videos','http://www.berkeley.edu/news/media/releases/2002/09/rfull/home.html']]],
+['Biochemical Reactions, Enzymes, and ATP','biochemistry/biochemical-reactions-enzymes-and-atp',[['Biochemical Reactions, Enzymes, and ATP','biochemical-reactions-enzymes-and-atp-1']],[],['1-5',''],[['Introduction to Thermodynamics and Protein Folding','http://www.youtube.com/watch?v=Qq4T7-UrIvE&list=UUzL5_XrNsQAbEKPv-EBSnSg&index=8&feature=plcp'],['Enzyme-Catalyzed Reactions','http://www.youtube.com/watch?v=kSiFdzITPI0&list=UUzL5_XrNsQAbEKPv-EBSnSg&index=7&feature=plcp'],['ATP and Coupled Reactions','http://www.youtube.com/watch?v=4O6DFv2p5js&list=UUzL5_XrNsQAbEKPv-EBSnSg&index=6&feature=plcp']]],
+['Respiration and Fermentation','biochemistry/respiration-and-fermentation',[['Glycolysis, Respiration, and Fermentation','glycolysis-respiration-and-fermentation-1']],[],['1-6',''],[['Glycolysis','http://en.wikipedia.org/wiki/Glycolysis'],['Cellular Respiration','http://hyperphysics.phy-astr.gsu.edu/hbase/biology/celres.html'],['How Glycolysis Works','http://highered.mcgraw-hill.com/sites/0072507470/student_view0/chapter25/animation__how_glycolysis_works.html'],['“Cell Respiration” – Cellular Respiration Song','http://www.youtube.com/watch?v=3aZrkdzrd04'],['The ATP Cycle','http://www.youtube.com/watch?v=AhuqXwvFv2E&list=UUE-DexCad-ctXVTE6OhZP8w&index=5&feature=plcp']]],
+['Chemiosmotic Principle, Photosynthesis','biochemistry/chemiosmotic-principle-photosynthesis',[['Photosynthesis','photosynthesis-1']],[],['1-7',''],[['Photosynthesis','http://en.wikipedia.org/wiki/Photosynthesis'],['Shedding Light on Photosynthesis','http://www.youtube.com/watch?v=OlzbVr7XEeU&list=UUE-DexCad-ctXVTE6OhZP8w&index=3&feature=plcp'],['What is Photosynthesis?','http://www.life.illinois.edu/govindjee/whatisit.htm']]]]},
+{n:'Molecular Biology',p:'molecular-biology',ex:['Exam 2','molecular-biology/exam-2','mit7_01scf11_exam2','mit7_01scf11_exam2_sol'],t:[
+['DNA Structure, Classic Experiments','molecular-biology/dna-structure-classic-experiments',[['DNA Structure and Classic experiments, Excerpt 1','dna-structure-and-classic-experiments-excerpt-1-1'],['DNA Structure and Classic experiments, Excerpt 2','dna-structure-and-classic-experiments-excerpt-2-1']],[],['2-1','1'],[['Hershey and Chase Experiment','https://www.youtube.com/watch?v=g9JQURwseIY'],['Meselson and Stahl Experiment','https://www.youtube.com/watch?v=JcUQ_TZCG0w'],['“Molecular Structure of Nucleic Acids” (The original Watson and Crick paper)','http://www.nature.com/physics/looking-back/crick/index.html']]],
+['DNA Replication','molecular-biology/dna-replication',[['DNA Replication','dna-replication-1']],[['Explanation of 5’ and 3’, C terminus, and N terminus','explanation-of-5-and-3-c-terminus-and-n-terminus-1']],['2-2',''],[['Replication: Mechanism of Replication (Basic), 3-D Animation Library','http://www.dnalc.org/resources/3d/03-mechanism-of-replication-basic.html'],['Replication: Mechanism of Replication (Advanced), 3-D Animation Library','http://www.dnalc.org/resources/3d/04-mechanism-of-replication-advanced.html']]],
+['Transcription, Translation','molecular-biology/transcription-translation',[['Transcription and translation, Excerpt 1','transcription-and-translation-excerpt-1-1'],['Transcription and translation, Excerpt 2','transcription-and-translation-excerpt-2-1']],[['Transcription and Translation','transcription-and-translation-1']],['2-3',''],[['The Nobel Prize in Physiology or Medicine 1968','http://www.nobelprize.org/nobel_prizes/medicine/laureates/1968/index.html'],['Transcription Animation (Basic)','http://www.dnalc.org/resources/3d/12-transcription-basic.html'],['Transcription Animation (Advanced)','http://www.dnalc.org/resources/3d/13-transcription-advanced.html'],['Translation Animation (Basic)','http://www.dnalc.org/resources/3d/15-translation-basic.html'],['Translation Animation (Advanced)','http://www.dnalc.org/resources/3d/16-translation-advanced.html'],['Triplet Code Animation','http://www.dnalc.org/resources/3d/10-triplet-code.html']]],
+['Alternative Approaches to Molecular Biology','molecular-biology/alternative-approaches-to-molecular-biology',[['Alternative Approaches to Molecular Biology','alternative-approaches-to-molecular-biology-1']],[],['2-4',''],[['Telomere Replication','http://www.youtube.com/watch?v=AJNoTmWsE0s'],['Elizabeth Blackburn Part 1: The Roles of Telomeres and Telomerase','http://www.youtube.com/watch?v=5PU_jZwt8KY'],['RNA Splicing—Removing Introns after RNA Transcription','https://www.youtube.com/watch?v=FVuAwBGw_pQ'],['RNA Splicing—An Introduction','http://www.youtube.com/watch?v=qmBtqppU6jY&feature=related'],['HIV / AIDS Replication Animation Video','http://www.youtube.com/watch?v=hdgNnXLY8LU']]],
+['Gene Regulation and the Lac Operon','molecular-biology/gene-regulation-and-the-lac-operon',[['Gene Regulation','gene-regulation-1']],[['The lac operon','the-lac-operon-1']],['2-5',''],[['lac operon','http://www.youtube.com/watch?v=iPQZXMKZEfw']]]]},
+{n:'Genetics',p:'genetics',ex:['Exam 3','genetics/exam-3','mit_7_01scf11_exam3','mit_7_01scf11_exam3_sol'],t:[
+['Mendel’s Laws','genetics/mendels-laws',[['Mendel’s Laws, Excerpt 1','mendels-laws-excerpt-1-1'],['Mendel’s Laws, Excerpt 2','mendels-laws-excerpt-2-1']],[],['3-1','1'],[['StarGenetics - Mendelian Genetics Virtual Lab','http://web.mit.edu/star/genetics/']]],
+['Linkage and Recombination, Genetic Maps','genetics/linkage-and-recombination-genetic-maps',[['Linkage and Recombination, Genetic maps','linkage-and-recombination-genetic-maps-1']],[],['3-2','1'],[['Virtual Genetics Lab','http://vgl.umb.edu/'],['Animal Cell Meiosis','http://www.cellsalive.com/meiosis.htm'],['How Cells Divide','http://www.pbs.org/wgbh/nova/body/how-cells-divide.html'],['Dihybrid Crosses and Linked Genes','http://www.youtube.com/watch?v=1_lTyzGTnho&feature=mfu_in_order&list=UL']]],
+['Pedigrees','genetics/pedigrees',[['Human Genetics','human-genetics-2']],[['Pedigrees','pedigrees-1']],['3-3','1'],[['Pedigree Analysis, Example 1','http://www.youtube.com/watch?v=HbIHjsn5cHo&feature=mfu_in_order&list=UL'],['Pedigree Analysis, Example 2','http://www.youtube.com/watch?v=ej2hFc8u_zQ&feature=mfu_in_order&list=UL'],['Pedigree Analysis, Example 3','http://www.youtube.com/watch?v=UU3Ou0c9u0U&feature=mfu_in_order&list=UL']]],
+['Biochemical Genetics','genetics/biochemical-genetics',[['Genetics 3','genetics-3-1'],['Human Genetics','copy_of_human-genetics']],[['Complementation','complementation-1'],['Complementation (Part II)','complementation-part-ii-1']],['3-4','1'],[['Complementation Test','http://www.britannica.com/EBchecked/topic/1710056/complementation-test'],['Epistasis: Gene Interaction and Phenotype Effects','http://www.nature.com/scitable/topicpage/epistasis-gene-interaction-and-phenotype-effects-460']]]]},
+{n:'Recombinant DNA',p:'recombinant-dna',ex:['Exam 4','recombinant-dna/exam-4','mit7_01scf11_exam4','mit7_01scf11_exam4_sol'],t:[
+['Development of Recombinant DNA','recombinant-dna/development-of-recombinant-dna',[['Overview of Recombinant DNA, Excerpt 1','overview-of-recombinant-dna-excerpt-1-1'],['Overview of Recombinant DNA, Excerpt 2','overview-of-recombinant-dna-excerpt-2-1']],[],null,[['History of Genentech','http://www.gene.com/gene/about/corporate/history/']]],
+['Basic Mechanics of Cloning','recombinant-dna/basic-mechanics-of-cloning',[['Basic Mechanisms of Cloning, Excerpt 1','basic-mechanisms-of-cloning-excerpt-1-1'],['Basic Mechanisms of Cloning, Excerpt 2','basic-mechanisms-of-cloning-excerpt-2-1'],['Basic Mechanisms of Cloning, Excerpt 3','basic-mechanisms-of-cloning-excerpt-3-1']],[],['4-2',''],[['Cloning in a Plasmid Vector','http://www.youtube.com/watch?v=acKWdNj936o'],['Key Steps of Molecular Cloning','http://www.youtube.com/watch?v=sjwNtQYLKeU&feature=related']]],
+['Constructing and Screening a Recombinant DNA Library','recombinant-dna/constructing-and-screening-a-recombinant-dna-library',[['Constructing and Screening a Recombinant DNA Library','constructing-and-screening-a-recombinant-dna-library-1']],[['Genomic and cDNA Libraries','genomic-and-cdna-libraries-1']],['4-3',''],[['Mapping and Sequencing the Human Genome','http://www.ornl.gov/sci/techresources/Human_Genome/publicat/primer/prim2.html'],['Construction of a DNA Library','http://www.sumanasinc.com/webcontent/animations/content/dnalibrary.html'],['Library Generation','http://openwetware.org/wiki/Library_Generation']]],
+['cDNA Libraries and Expression Libraries','recombinant-dna/cdna-libraries-and-expression-libraries',[['cDNA Libraries and Expression Libraries','cdna-libraries-and-expression-libraries-1']],[['Transformation and Protein Expression','transformation-and-protein-expression-1']],['4-4',''],[['Isolation and use of cDNA clones','http://www-users.med.cornell.edu/~jawagne/cDNA_cloning.html'],['Techniques of Molecular Biology','http://11e.devbio.com/']]],
+['Agarose Gel Electrophoresis, DNA Sequencing, PCR','recombinant-dna/agarose-gel-electrophoresis-dna-sequencing-pcr',[['Agarose Gel Electrophoresis, DNA Sequencing, PCR, Excerpt 1','agarose-gel-electrophoresis-dna-sequencing-pcr-excerpt-1-1'],['Agarose Gel Electrophoresis, DNA Sequencing, PCR, Excerpt 2','agarose-gel-electrophoresis-dna-sequencing-pcr-excerpt-2-1']],[['Polymerase Chain Reaction (PCR)','polymerase-chain-reaction-pcr-1']],['4-5',''],[['DNA Sequencing','http://en.wikipedia.org/wiki/DNA_sequencing'],['Jonathan Weissman: DNA Sequencing','http://www.youtube.com/watch?v=8n2LvJ-m0n0'],['Biology Animation Library','http://www.dnalc.org/resources/animations/pcr.html'],['PCR Virtual Lab','http://learn.genetics.utah.edu/content/labs/pcr/']]]]}];
+const a=(h,t)=>`<li><a href="${h}" target="_blank" rel="noopener"><span>${t}</span></a></li>`;
+const col=(c,h,items)=>`<div class="col ${c}"><h4>${h}</h4>${items.length?'<ul>'+items.join('')+'</ul>':'<div class="none">None</div>'}</div>`;
+let html='',nav='';
+U.forEach((u,i)=>{
+ nav+=`<a href="#u${i}">${u.n}</a>`;
+ html+=`<section class="unit" id="u${i}"><h2><a href="${P(u.p)}" target="_blank" rel="noopener" style="text-decoration:none">${u.n}</a></h2><p class="sub">${u.t.length} topics + ${u.ex[0]}</p>`;
+ u.t.forEach(t=>{
+  const [title,pp,v,h,ps,l]=t;
+  const prob=ps?[a(R('mit7_01scf11_'+ps[0]+'prob'+ps[1]),'Problems (PDF)'),a(R('mit7_01scf11_'+ps[0]+'sol'+ps[1]),'Solutions (PDF)')]:[];
+  html+=`<div class="card"><h3><a href="${P(pp)}" target="_blank" rel="noopener">${title}</a></h3><div class="cols">`+
+  col('v','Lecture Video Clips',v.map(x=>a(R(x[1]),x[0])))+col('h','Help Session Videos',h.map(x=>a(R(x[1]),x[0])))+col('p','Practice Problem Sets',prob)+col('l','Useful Links',l.map(x=>a(x[1],x[0])))+`</div></div>`;
+ });
+ const e=u.ex;
+ html+=`<div class="card exam"><h3><a href="${P(e[1])}" target="_blank" rel="noopener">${e[0]}</a></h3><div class="cols">`+col('p','Exam and Solutions',[a(R(e[2]),'Exam (PDF)'),a(R(e[3]),'Solutions (PDF)')])+`</div></div></section>`;
+});
+document.getElementById('app').innerHTML=html;document.getElementById('nav').innerHTML=nav;
+document.getElementById('q').addEventListener('input',e=>{
+ const q=e.target.value.toLowerCase().trim();
+ document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hide',q&&!c.textContent.toLowerCase().includes(q)));
+ document.querySelectorAll('.unit').forEach(u=>u.classList.toggle('hide',q&&![...u.querySelectorAll('.card')].some(c=>!c.classList.contains('hide'))));
+});
+document.getElementById('th').onclick=()=>{const r=document.documentElement,d=getComputedStyle(r).colorScheme==='dark';r.setAttribute('data-theme',d?'light':'dark')};
+</script></body></html>
